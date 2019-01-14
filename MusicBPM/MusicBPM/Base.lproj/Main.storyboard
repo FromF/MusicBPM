@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicBPM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="51E-h3-dsE">
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJZ-Or-OR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="70"/>
+                                        <connections>
+                                            <action selector="BPM70ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X82-v6-zR3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYQ-YI-N7r">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="30"/>
+                                        <state key="normal" title="80"/>
+                                        <connections>
+                                            <action selector="BPM80ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uoX-0D-ppV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdO-T2-jiW">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="30"/>
+                                        <state key="normal" title="90"/>
+                                        <connections>
+                                            <action selector="BPM90ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXA-dY-g4A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vd-5j-E01">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="30"/>
+                                        <state key="normal" title="100"/>
+                                        <connections>
+                                            <action selector="BPM100ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dea-eC-iMP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBy-9g-g5P">
+                                <rect key="frame" x="16" y="268" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="51E-h3-dsE" firstAttribute="top" secondItem="CBy-9g-g5P" secondAttribute="bottom" constant="30" id="KsV-5v-FYD"/>
+                            <constraint firstItem="51E-h3-dsE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ljx-5k-bGf"/>
+                            <constraint firstItem="51E-h3-dsE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SFD-NA-Nq8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CBy-9g-g5P" secondAttribute="trailing" constant="16" id="dL4-Qq-aTV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="51E-h3-dsE" secondAttribute="trailing" constant="16" id="hf1-op-wY7"/>
+                            <constraint firstItem="CBy-9g-g5P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pKS-Zk-7LA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="infomationLabel" destination="CBy-9g-g5P" id="Pyh-aJ-7b3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
